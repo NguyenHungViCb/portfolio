@@ -1,0 +1,17 @@
+[
+  {
+    "name": "gmail",
+    "icon": "/assets/gmail.svg",
+    "link": ""
+  },
+  {
+    "name": "facebook",
+    "icon": "/assets/facebook.svg",
+    "link": ""
+  },
+  {
+    "name": "twitter",
+    "icon": "/assets/twitter.svg",
+    "link": ""
+  }
+]
