@@ -1,0 +1,38 @@
+[
+  {
+    "name": "reactjs",
+    "icon": "/assets/react.svg"
+  },
+  {
+    "name": "nextjs",
+    "icon": "/assets/next.svg"
+  },
+  {
+    "name": "javascript",
+    "icon": "/assets/javascript.svg"
+  },
+  {
+    "name": "typescript",
+    "icon": "/assets/typescript.svg"
+  },
+  {
+    "name": "nodejs",
+    "icon": "/assets/nodejs.svg"
+  },
+  {
+    "name": "c#",
+    "icon": "/assets/csharp.svg"
+  },
+  {
+    "name": "dotnet",
+    "icon": "/assets/microsoft-dotnet.svg"
+  },
+  {
+    "name": "asp",
+    "icon": "/assets/microsoft-dotnet.svg"
+  },
+  {
+    "name": "sql",
+    "icon": "/assets/sql.svg"
+  }
+]
