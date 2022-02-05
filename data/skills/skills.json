@@ -1,37 +1,46 @@
 [
   {
+    "id": "react",
     "name": "reactjs",
     "icon": "/assets/react.svg"
   },
   {
+    "id": "nextjs",
     "name": "nextjs",
     "icon": "/assets/next.svg"
   },
   {
+    "id": "js",
     "name": "javascript",
     "icon": "/assets/javascript.svg"
   },
   {
+    "id": "ts",
     "name": "typescript",
     "icon": "/assets/typescript.svg"
   },
   {
+    "id": "nodejs",
     "name": "nodejs",
     "icon": "/assets/nodejs.svg"
   },
   {
+    "id": "c-sharp",
     "name": "c#",
     "icon": "/assets/csharp.svg"
   },
   {
+    "id": "dotnet",
     "name": "dotnet",
     "icon": "/assets/microsoft-dotnet.svg"
   },
   {
+    "id": "asp",
     "name": "asp",
     "icon": "/assets/microsoft-dotnet.svg"
   },
   {
+    "id": "sql",
     "name": "sql",
     "icon": "/assets/sql.svg"
   }

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "nextjs",
+    "name": "nextjs",
+    "icon": "/assets/nextjs.svg"
+  },
+  {
+    "id": "tailwindcss",
+    "name": "tailwindcss",
+    "icon": "/assets/tailwindcss.svg"
+  },
+  {
+    "id": "graphql",
+    "name": "graphql",
+    "icon": "/assets/graphql.svg"
+  },
+  {
+    "id": "web-design",
+    "name": "web animation",
+    "icon": "/assets/animation.svg"
+  },
+  {
+    "id": "php",
+    "name": "php",
+    "icon": "/assets/php.svg"
+  },
+  {
+    "id": "web-design",
+    "name": "web design",
+    "icon": "/assets/web-design.svg"
+  },
+  {
+    "id": "adobe-ai",
+    "name": "Adobe illustrator",
+    "icon": "/assets/adobe-illustrator.svg"
+  }
+]
