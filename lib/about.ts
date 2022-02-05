@@ -66,3 +66,23 @@ export async function getContactOptions() {
   }
   return data;
 }
+
+export async function getSkillList() {
+  try {
+    const { data } = await axios.get("http://localhost:3000/api/skills");
+    return data;
+  } catch (error) {
+    return [];
+  }
+}
+
+export async function getSkillToLearnList() {
+  try {
+    const { data } = await axios.get(
+      "http://localhost:3000/api/skills-to-learn"
+    );
+    return data;
+  } catch (error) {
+    return [];
+  }
+}
