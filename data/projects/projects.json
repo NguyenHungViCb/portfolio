@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Game store(penguin store)",
     "time": "2022",
     "timestampt": "12/01/2021",
@@ -15,8 +16,10 @@
     "link": "https://penguin.149311cb.tech/"
   },
   {
+    "id": 2,
     "name": "Smartphone store",
     "display-time": "Semester 1 - 2021-2022",
+    "time": "01/2021",
     "timestampt": "02/01/2021",
     "tech-stack": [
       "react",
@@ -29,6 +32,7 @@
     "link": "https://smartphone-store.149311cb.tech/"
   },
   {
+    "id": 3,
     "name": "Golf store",
     "time": "9/2022",
     "timestampt": "09/01/2021",
