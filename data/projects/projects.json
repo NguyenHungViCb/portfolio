@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Game store(penguin store)",
+    "time": "2022",
+    "timestampt": "12/01/2021",
+    "tech-stack": [
+      "react",
+      "material-ui",
+      "nodejs",
+      "mongodb"
+    ],
+    "overview": "Build for school project, it took me about 1.5 month for both frontend and backend. Build with react, material-ui for the frontend and nodejs for backend",
+    "preview-image": "/assets/penguin-homepage-screenshot.png",
+    "github": "https://github.com/NguyenHungViCb/web-shop-ban-game",
+    "link": "https://penguin.149311cb.tech/"
+  },
+  {
+    "name": "Smartphone store",
+    "display-time": "Semester 1 - 2021-2022",
+    "timestampt": "02/01/2021",
+    "tech-stack": [
+      "react",
+      "nodejs",
+      "mongodb"
+    ],
+    "overview": "First project build with react, never used javascript before but manage to learn along the way. A mess but I learned alot.",
+    "preview-image": "/assets/smartphone-homepage-screenshot.png",
+    "github": "https://github.com/NguyenHungViCb/Smartphone-Store",
+    "link": "https://smartphone-store.149311cb.tech/"
+  },
+  {
+    "name": "Golf store",
+    "time": "9/2022",
+    "timestampt": "09/01/2021",
+    "tech-stack": [
+      "react",
+      "nodejs",
+      "mongodb"
+    ],
+    "overview": "Build to improve my react skill, try not to use a lot framework, first time used typescript and now I love it",
+    "preview-image": "/assets/golf-homepage-screenshot.jpg",
+    "github": "https://github.com/NguyenHungViCb/golf-store",
+    "link": "https://golf-store.149311cb.tech/"
+  }
+]
