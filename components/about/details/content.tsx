@@ -63,7 +63,7 @@ const Content: NextPage<{
           ))}
       </ul>
       <hr className={`sm:h-full border-black border`} />
-      <div className="relative sm:w-9/12 h-full overflow-scroll">
+      <div className="relative sm:w-9/12 h-full overflow-auto">
         {locked ? (
           <div className="image-container absolute right-0 z-20">
             <Image src="/assets/lock.svg" height={32} width={32} alt={"lock"} />

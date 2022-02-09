@@ -86,3 +86,15 @@ export async function getSkillToLearnList() {
     return [];
   }
 }
+
+export async function getProjectList() {
+  try {
+    const { data } = await axios.get("http://localhost:3000/api/projects");
+    return data.sort(function (a: any, b: any) {
+      // @ts-ignore
+      return new Date(a.timestampt) - new Date(b.timestampt);
+    });
+  } catch (error) {
+    return [];
+  }
+}

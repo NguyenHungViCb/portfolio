@@ -1,22 +1,26 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import Head from "next/head";
 import { Header } from "../components/header/Header";
 import { Layout } from "../components/layout/Layout";
 import {
   getAboutMeData,
   getContactOptions,
+  getProjectList,
   getSkillList,
   getSkillToLearnList,
 } from "../lib/about";
 import Avatar from "../components/about/avatar";
 import Details from "../components/about/details/details";
+import SkillBox from "../components/skills/SkillBox";
+import SkillList from "../components/skills/SkillList";
+import { Project } from "../components/project/project";
 
 const Home: NextPage<any> = ({
   aboutMe,
   contactOptions,
   skills,
   skillsToLearn,
+  projects,
 }) => {
   return (
     <div className="min-w-[320px]">
@@ -35,43 +39,37 @@ const Home: NextPage<any> = ({
           </section>
           <section id="skill">
             <h1 className="mb-3 text-xl font-semibold">Skills</h1>
-            <ul className="skill-list grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:auto-cols-max gap-2 lg:gap-4">
+            <SkillList className="lg:grid-cols-6">
               {skills &&
                 Array.isArray(skills) &&
                 skills.map((skill: any) => (
-                  <li
-                    className="inline-flex items-center gap-3 border border-black rounded-lg py-1 px-2"
-                    key={skill.id}
-                  >
-                    <Image src={skill.icon} width={32} height={32} />
-                    <span>
-                      {(skill.name[0] as string).toUpperCase() +
-                        skill.name.slice(1)}
-                    </span>
-                  </li>
+                  <SkillBox skill={skill} key={skill.id} />
                 ))}
-            </ul>
+            </SkillList>
           </section>
           <section id="skill-to-learn">
             <h1 className="mb-3 text-xl font-semibold">
               Skill and technology I plan to learn in 2022
             </h1>
-            <ul className="skill-list grid grid-cols-3 md:grid-cols-5 xl:auto-cols-max gap-2 lg:gap-4">
+            <SkillList>
               {skillsToLearn &&
                 Array.isArray(skillsToLearn) &&
                 skillsToLearn.map((skill: any) => (
-                  <li
-                    className="inline-flex items-center gap-3 border border-black rounded-lg py-1 px-2"
-                    key={skill.id}
-                  >
-                    <Image src={skill.icon} width={32} height={32} />
-                    <span>
-                      {(skill.name[0] as string).toUpperCase() +
-                        skill.name.slice(1)}
-                    </span>
-                  </li>
+                  <SkillBox skill={skill} key={"skill-to-learn" + skill.id} />
                 ))}
-            </ul>
+            </SkillList>
+          </section>
+          <section id="projects" className="mb-3">
+            <h1 className="mb-3 text-xl font-semibold">Projects</h1>
+            {projects &&
+              Array.isArray(projects) &&
+              projects.map((project: any, index: number) => (
+                <Project
+                  key={project.id}
+                  index={index}
+                  project={project}
+                />
+              ))}
           </section>
         </Layout>
       </main>
@@ -86,12 +84,14 @@ export const getStaticProps = async () => {
   const contactOptions = await getContactOptions();
   const skills = await getSkillList();
   const skillsToLearn = await getSkillToLearnList();
+  const projects = await getProjectList();
   return {
     props: {
-      aboutMe,
+      aboutMe: aboutMe.reverse(),
       contactOptions,
       skills,
       skillsToLearn,
+      projects,
     },
   };
 };

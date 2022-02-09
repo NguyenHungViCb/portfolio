@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c97711c7-0d66-4cc3-8e85-694b30cfc439" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/details/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/details/content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/about.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/about.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +25,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="24EoHVVJQeoAl1psUqw1SLTHmMD" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -44,12 +44,17 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/components/project/projectPreview.tsx" />
+      <recent name="$PROJECT_DIR$/components/project/projectOverview.tsx" />
+      <recent name="$PROJECT_DIR$/components/project/project.tsx" />
+      <recent name="$PROJECT_DIR$/components/project/tech.tsx" />
       <recent name="$PROJECT_DIR$/components/about.tsx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -73,6 +78,9 @@
       <workItem from="1643516957737" duration="318000" />
       <workItem from="1643517299380" duration="53000" />
       <workItem from="1643517443467" duration="1170000" />
+      <workItem from="1644034107983" duration="567000" />
+      <workItem from="1644034736207" duration="568000" />
+      <workItem from="1644396552515" duration="596000" />
     </task>
     <servers />
   </component>
