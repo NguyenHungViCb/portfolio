@@ -3,7 +3,7 @@ import { animationInterval } from "../utils/animationInterval";
 
 export const useAnimationFrame = (
   ms: any,
-  controller: AbortController,
+  controller: AbortController | null,
   callback: (dependencies: any[]) => void,
   deps?: any[]
 ) => {
@@ -14,6 +14,9 @@ export const useAnimationFrame = (
   }, [callback]);
 
   useEffect(() => {
+    if (!controller) {
+      return;
+    }
     animationInterval(ms, controller.signal, () => {
       callbackRef.current(dependencies);
     });

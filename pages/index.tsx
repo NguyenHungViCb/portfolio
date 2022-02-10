@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "../components/header/Header";
@@ -37,7 +37,7 @@ const Home: NextPage<any> = ({
             className={`flex flex-col items-center gap-5 h-[45rem]`}
           >
             <Avatar />
-            <About aboutMe={aboutMe} />
+            {aboutMe && <About aboutMe={aboutMe} />}
           </section>
           <section id="skills" className="flex flex-col items-center">
             <h1 className="mb-5 text-2xl font-semibold">Skills</h1>
@@ -83,7 +83,7 @@ const Home: NextPage<any> = ({
           </section>
           <section id="contact" className="mb-10 flex flex-col items-center">
             <h1 className="mb-5 text-2xl font-semibold">Contact</h1>
-            <Contact contactOptions={contactOptions} />
+            {contactOptions && <Contact contactOptions={contactOptions} /> }
           </section>
         </Layout>
       </main>
@@ -93,7 +93,7 @@ const Home: NextPage<any> = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const aboutMe = await getAboutMeData();
   const contactOptions = await getContactOptions();
   const skills = await getSkillList();
@@ -101,11 +101,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const projects = await getProjectList();
   return {
     props: {
-      aboutMe: aboutMe.reverse(),
-      contactOptions,
-      skills,
-      skillsToLearn,
-      projects,
+      aboutMe: aboutMe,
+      contactOptions: contactOptions,
+      skills: skills,
+      skillsToLearn: skillsToLearn,
+      projects: projects,
     },
   };
 };

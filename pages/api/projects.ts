@@ -16,7 +16,7 @@ const getProjectList = async (_: NextApiRequest, res: NextApiResponse) => {
     );
     const bytes = base64.decode(data.content);
     const text = utf8.decode(bytes);
-    res.status(200).json(text);
+    return res.status(200).json(text);
   } catch (error: any) {
     console.log(error.message);
     return res.status(500).json({ message: "something went wrong" });

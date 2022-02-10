@@ -34,7 +34,6 @@ export default async function getAboutMeContent(
     }
     res.status(200).send(decodedData);
   } catch (error: any) {
-    console.log(error.message);
-    res.status(500).send("Something went wrong");
+    res.status(500).send({ error: error.message });
   }
 }

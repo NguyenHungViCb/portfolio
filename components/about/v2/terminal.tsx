@@ -16,7 +16,7 @@ const Terminal: React.FC<{
           <li className="w-[14px] h-[14px] rounded-full bg-green-500" />
         </ul>
         <div className="absolute inset-0 justify-center flex items-center">
-          {aboutMe[contentIndex].title.replaceAll(" ", "_")}
+          {aboutMe[contentIndex].title.replace(/\s/g, '_')}
         </div>
       </div>
       <div className="content relative bg-gray-200 h-[90%]">

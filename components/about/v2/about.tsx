@@ -38,16 +38,13 @@ const animate = (
 };
 
 const About: React.FC<{ aboutMe: any }> = ({ aboutMe }) => {
-  const firstMount = useRef(true);
   const typewritter = useRef<HTMLSpanElement>(null);
   // Use to control title being display
   const [current, setCurrent] = useState<number>(0);
   // Use to control content being display
   const [contentIndex, setContentIndex] = useState<number>(0);
   const [locked, setLoked] = useState<boolean>(false);
-  const [controller, setController] = useState<AbortController>(
-    new AbortController()
-  );
+  const [controller, setController] = useState<AbortController | null>(null);
 
   // DELETE ANIMATION
   useAnimationFrame(
@@ -99,18 +96,12 @@ const About: React.FC<{ aboutMe: any }> = ({ aboutMe }) => {
   }, [current]);
 
   useEffect(() => {
-    if (locked) {
+    if (locked && controller) {
       controller.abort();
-    } else if (!firstMount.current) {
+    } else {
       setController(new AbortController());
     }
   }, [locked]);
-
-  useEffect(() => {
-    if (firstMount) {
-      firstMount.current = false;
-    }
-  }, []);
 
   return (
     <div className="flex flex-col gap-5 items-center grow">

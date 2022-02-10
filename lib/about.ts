@@ -16,29 +16,40 @@ export const extractMatter = async (text: string) => {
 
 export async function getAboutMeData() {
   const readLocalData = async () => {
-    const aboutDir = path.join(process.cwd(), "data/about/me");
-    const fileNames = fs.readdirSync(aboutDir);
-    const result = await Promise.all(
-      fileNames.reverse().map(async (fileName) => {
-        const id = fileName.replace(/\.md$/, "");
+    try {
+      const aboutDir = path.join(process.cwd(), "data/about/me");
+      const fileNames = fs.readdirSync(aboutDir);
+      const result = await Promise.all(
+        fileNames.reverse().map(async (fileName) => {
+          const id = fileName.replace(/\.md$/, "");
 
-        const fullPath = path.join(aboutDir, fileName);
-        const fileContents = fs.readFileSync(fullPath, "utf8");
+          const fullPath = path.join(aboutDir, fileName);
+          const fileContents = fs.readFileSync(fullPath, "utf8");
 
-        const { contentHtml, matterResult } = await extractMatter(fileContents);
-        return {
-          id,
-          contentHtml,
-          ...matterResult.data,
-        };
-      })
-    );
-    return result;
+          const { contentHtml, matterResult } = await extractMatter(
+            fileContents
+          );
+          return {
+            id,
+            contentHtml,
+            ...matterResult.data,
+          };
+        })
+      );
+      return result;
+    } catch (error) {
+      return null;
+    }
   };
   const readDataFromApi = async () => {
-    const { data } = await axios.get("http://localhost:3000/api/about");
-    return data;
+    try {
+      const { data } = await axios.get("https://149311cb.tech/api/about");
+      return data;
+    } catch (error) {
+      return null;
+    }
   };
+
   let result = await readDataFromApi();
   if (!result) {
     result = await readLocalData();
@@ -48,17 +59,25 @@ export async function getAboutMeData() {
 
 export async function getContactOptions() {
   const readDataFromApi = async () => {
-    const { data } = await axios.get(
-      "http://localhost:3000/api/contact/options"
-    );
-    return data;
+    try {
+      const { data } = await axios.get(
+        "https://149311cb.tech/api/contact/options"
+      );
+      return data;
+    } catch (error) {
+      return null;
+    }
   };
   const readLocalData = () => {
-    const contactDir = path.join(process.cwd(), "data/about/contact");
-    const fileContents = JSON.parse(
-      fs.readFileSync(path.join(contactDir, "index.json"), "utf8")
-    );
-    return fileContents;
+    try {
+      const contactDir = path.join(process.cwd(), "data/about/contact");
+      const fileContents = JSON.parse(
+        fs.readFileSync(path.join(contactDir, "index.json"), "utf8")
+      );
+      return fileContents;
+    } catch (error: any) {
+      console.log(error.message);
+    }
   };
   const data = await readDataFromApi();
   if (!data) {
@@ -69,7 +88,7 @@ export async function getContactOptions() {
 
 export async function getSkillList() {
   try {
-    const { data } = await axios.get("http://localhost:3000/api/skills");
+    const { data } = await axios.get("https://149311cb.tech/api/skills");
     return data;
   } catch (error) {
     return [];
@@ -79,7 +98,7 @@ export async function getSkillList() {
 export async function getSkillToLearnList() {
   try {
     const { data } = await axios.get(
-      "http://localhost:3000/api/skills-to-learn"
+      "https://149311cb.tech/api/skills-to-learn"
     );
     return data;
   } catch (error) {
@@ -89,7 +108,7 @@ export async function getSkillToLearnList() {
 
 export async function getProjectList() {
   try {
-    const { data } = await axios.get("http://localhost:3000/api/projects");
+    const { data } = await axios.get("https://149311cb.tech/api/projects");
     return data.sort(function (a: any, b: any) {
       // @ts-ignore
       return new Date(a.timestampt) - new Date(b.timestampt);
