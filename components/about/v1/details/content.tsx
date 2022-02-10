@@ -1,11 +1,10 @@
-import { NextPage } from "next";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const aboutNavClassName =
   "w-full flex items-center justify-center rounded-t-md sm:rounded-none";
 const activeAboutNavClassName = `bg-blue-900 ${aboutNavClassName}`;
-const Content: NextPage<{
+const Content: React.FC<{
   aboutMe: any;
   aboutNavRef: React.RefObject<HTMLUListElement>;
   setCurrentAbout: (index: number) => void;

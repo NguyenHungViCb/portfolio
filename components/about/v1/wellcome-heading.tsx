@@ -1,10 +1,9 @@
-import { NextPage } from "next";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../../styles/globals.module.css";
 import { animateTo } from "../../../utils/animateTo";
 
 let navItems: HTMLLIElement[] = [];
-const WelcomeHeading: NextPage<{
+const WelcomeHeading: React.FC<{
   aboutMe: any;
   currentAbout: number;
 }> = ({ aboutMe, currentAbout }) => {

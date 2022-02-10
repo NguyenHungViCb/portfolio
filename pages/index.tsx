@@ -83,12 +83,6 @@ const Home: NextPage<any> = ({
           </section>
           <section id="contact" className="mb-10 flex flex-col items-center">
             <h1 className="mb-5 text-2xl font-semibold">Contact</h1>
-            {/* <form className="border border-gray-300 shadow-lg rounded-lg w-1/2 m-auto p-5"> */}
-            {/*   <label className="block"> */}
-            {/*     <span className="block">Email</span> */}
-            {/*     <input className="border border-gray-300" /> */}
-            {/*   </label> */}
-            {/* </form> */}
             <Contact contactOptions={contactOptions} />
           </section>
         </Layout>

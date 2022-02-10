@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useAnimationFrame } from "../../../../hooks/useAnimationFrame";
-import { NextPage } from "next";
 import WelcomeHeading from "../wellcome-heading";
 import Content from "./content";
 import Contact from "../contacts";
 
-export const Details: NextPage<any> = ({ aboutMe, contactOptions }) => {
+export const Details: React.FC<any> = ({ aboutMe, contactOptions }) => {
   const aboutNavRef = useRef<HTMLUListElement>(null);
   const [currentAbout, setCurrentAbout] = useState(0);
   const [itemsLength, setItemLength] = useState(0);
