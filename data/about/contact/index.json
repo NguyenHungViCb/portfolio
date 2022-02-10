@@ -2,16 +2,16 @@
   {
     "name": "gmail",
     "icon": "/assets/gmail.svg",
-    "link": ""
+    "link": "mailto:nguyenhungvicb@gmail.com"
   },
   {
     "name": "facebook",
     "icon": "/assets/facebook.svg",
-    "link": ""
+    "link": "https://www.facebook.com/profile.php?id=100026718286314"
   },
   {
     "name": "twitter",
     "icon": "/assets/twitter.svg",
-    "link": ""
+    "link": "https://twitter.com/149311cb"
   }
 ]
