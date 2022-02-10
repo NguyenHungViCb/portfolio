@@ -2,36 +2,49 @@
   {
     "id": "nextjs",
     "name": "nextjs",
-    "icon": "/assets/nextjs.svg"
+    "icon": "/assets/nextjs.svg",
+    "note": "Server side library is back"
   },
   {
     "id": "tailwindcss",
     "name": "tailwindcss",
-    "icon": "/assets/tailwindcss.svg"
+    "icon": "/assets/tailwindcss.svg",
+    "note": "Thought I like to write css on my own, it just take too much time"
   },
   {
     "id": "graphql",
     "name": "graphql",
-    "icon": "/assets/graphql.svg"
+    "icon": "/assets/graphql.svg",
+    "note": "I find it quite interesting"
   },
   {
     "id": "web-animation",
     "name": "web animation",
-    "icon": "/assets/animation.svg"
+    "icon": "/assets/animation.svg",
+    "note": "I'm pretty bad at this so I want to improve it"
   },
   {
     "id": "php",
     "name": "php",
-    "icon": "/assets/php.svg"
+    "icon": "/assets/php.svg",
+    "note": "I think be able to work with legacy code/tech is very important"
   },
   {
     "id": "web-design",
     "name": "web design",
-    "icon": "/assets/web-design.svg"
+    "icon": "/assets/web-design.svg",
+    "note": "I'm bad at design but I want to create cool stuff"
   },
   {
     "id": "adobe-ai",
     "name": "Adobe illustrator",
-    "icon": "/assets/adobe-illustrator.svg"
+    "icon": "/assets/adobe-illustrator.svg",
+    "note": "Just another goal to improve my design skill"
+  },
+  {
+    "id": "office",
+    "name": "Office",
+    "icon": "/assets/office.svg",
+    "note": "I'm suck at these but I will need it for work, so..."
   }
 ]
