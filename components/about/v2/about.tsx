@@ -38,32 +38,42 @@ const animate = (
 };
 
 const About: React.FC<{ aboutMe: any }> = ({ aboutMe }) => {
+  const firstMount = useRef(true);
   const typewritter = useRef<HTMLSpanElement>(null);
   // Use to control title being display
   const [current, setCurrent] = useState<number>(0);
   // Use to control content being display
   const [contentIndex, setContentIndex] = useState<number>(0);
+  const [locked, setLoked] = useState<boolean>(false);
+  const [controller, setController] = useState<AbortController>(
+    new AbortController()
+  );
 
   // DELETE ANIMATION
-  useAnimationFrame(5000, new AbortController(), async () => {
-    const title = document.querySelector("#title");
-    const covers = document.querySelectorAll(".cover");
-    const cursors = document.querySelectorAll(".cursor");
+  useAnimationFrame(
+    5000,
+    controller,
+    async () => {
+      const title = document.querySelector("#title");
+      const covers = document.querySelectorAll(".cover");
+      const cursors = document.querySelectorAll(".cursor");
 
-    if (covers && cursors && title) {
-      animate(covers, cursors, title, "delete");
-      // Wait for animation to finished before change current
-      await new Promise(() => {
-        setTimeout(() => {
-          if (current === aboutMe.length - 1) {
-            setCurrent(0);
-          } else {
-            setCurrent(current + 1);
-          }
-        }, 130 * title.textContent!.length + 1000);
-      });
-    }
-  });
+      if (covers && cursors && title) {
+        animate(covers, cursors, title, "delete");
+        // Wait for animation to finished before change current
+        await new Promise(() => {
+          setTimeout(() => {
+            if (current === aboutMe.length - 1) {
+              setCurrent(0);
+            } else {
+              setCurrent(current + 1);
+            }
+          }, 130 * title.textContent!.length + 1000);
+        });
+      }
+    },
+    [controller]
+  );
 
   // REVEAL ANIMATION
   // Rerun everytime current change
@@ -78,7 +88,7 @@ const About: React.FC<{ aboutMe: any }> = ({ aboutMe }) => {
         animate(covers, cursors, title, "reveal");
         await new Promise(() => {
           setTimeout(() => {
-            // Use different state because content should be display 
+            // Use different state because content should be display
             // only after title has been revealed
             setContentIndex(current);
           }, 130 * title.textContent!.length + 100);
@@ -87,6 +97,20 @@ const About: React.FC<{ aboutMe: any }> = ({ aboutMe }) => {
     };
     sequenceAnimation();
   }, [current]);
+
+  useEffect(() => {
+    if (locked) {
+      controller.abort();
+    } else if (!firstMount.current) {
+      setController(new AbortController());
+    }
+  }, [locked]);
+
+  useEffect(() => {
+    if (firstMount) {
+      firstMount.current = false;
+    }
+  }, []);
 
   return (
     <div className="flex flex-col gap-5 items-center grow">
@@ -99,6 +123,8 @@ const About: React.FC<{ aboutMe: any }> = ({ aboutMe }) => {
         aboutMe={aboutMe}
         contentIndex={contentIndex}
         current={current}
+        locked={locked}
+        setLocked={setLoked}
       />
     </div>
   );

@@ -7,22 +7,22 @@
   src: url("../public/fonts/JetBrainsMono-Bold.woff2");
 }
 
-@font-face{
+@font-face {
   font-family: JetBrainsMono-BoldItalic;
   src: url("../public/fonts/JetBrainsMono-BoldItalic.woff2");
 }
 
-@font-face{
+@font-face {
   font-family: JetBrainsMono;
   src: url("../public/fonts/JetBrainsMono-Regular.woff2");
 }
 
-@font-face{
+@font-face {
   font-family: JetBrainsMono-Medium;
   src: url("../public/fonts/JetBrainsMono-Medium.woff2");
 }
 
-@font-face{
+@font-face {
   font-family: JetBrainsMono-Semibold;
   src: url("../public/fonts/JetBrainsMono-SemiBold.woff2");
 }
@@ -30,4 +30,10 @@
 html {
   scroll-behavior: smooth;
   font-family: JetBrainsMono;
+}
+
+@layer components {
+  .terminal-content a {
+    @apply text-cyan-600 underline-offset-8;
+  }
 }

@@ -6,7 +6,7 @@ const WelcomeHeading: React.FC<{
   return (
     <h1 className="text-2xl font-semibold">
       Hi, I'm{" "}
-      <span ref={typewritter} className={"relative"}>
+      <span ref={typewritter} className={"relative block sm:inline"}>
         <span id="title" className="relative text-green-500">
           {aboutMe[current].title}
           <span className="cover bg-gray-100 absolute inset-0" />

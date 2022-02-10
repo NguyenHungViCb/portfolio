@@ -27,3 +27,7 @@
 .letter-spacing-0 {
   letter-spacing: 0;
 }
+
+.last-child > div{
+  margin-bottom: 0;
+}
