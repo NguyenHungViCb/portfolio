@@ -5,7 +5,7 @@ const WelcomeHeading: React.FC<{
 }> = ({ typewritter, aboutMe, current }) => {
   return (
     <h1 className="text-2xl font-semibold">
-      Hi, I'm{" "}
+      Hi, I&apos;m{" "}
       <span ref={typewritter} className={"relative block sm:inline"}>
         <span id="title" className="relative text-green-500">
           {aboutMe[current].title}
