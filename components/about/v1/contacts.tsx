@@ -8,7 +8,7 @@ const Contact: React.FC<any> = ({ contactOptions }) => {
         {contactOptions &&
           Array.isArray(contactOptions) &&
           contactOptions.map((contact: any) => (
-            <li className="border border-black flex items-center rounded p-2" key={contact.name}>
+            <li className="flex items-center rounded p-2" key={contact.name}>
               <Image src={contact.icon} height={24} width={24} alt={contact.name}/>
             </li>
           ))}

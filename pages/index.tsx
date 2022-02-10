@@ -9,35 +9,35 @@ import {
   getSkillList,
   getSkillToLearnList,
 } from "../lib/about";
-import Avatar from "../components/about/avatar";
-import Details from "../components/about/details/details";
+import Avatar from "../components/about/v1/avatar";
 import SkillBox from "../components/skills/SkillBox";
 import SkillList from "../components/skills/SkillList";
 import { Project } from "../components/project/project";
+import About from "../components/about/v2/about";
 
 const Home: NextPage<any> = ({
   aboutMe,
-  contactOptions,
   skills,
   skillsToLearn,
   projects,
 }) => {
+  
   return (
-    <div className="min-w-[320px]">
+    <div className="min-w-[320px] bg-gray-100">
       <Head>
         <title>About</title>
       </Head>
       <Header />
-      <main className={`border-red-900 border-2`}>
-        <Layout className="flex flex-col gap-5">
+      <main>
+        <Layout className="flex flex-col gap-10">
           <section
             id="about"
-            className={`flex flex-col items-center border-blue-900 border-2 gap-5 h-screen sm:min-h-[89vh] tall:h-[80vh] max-h-[645px]`}
+            className={`flex flex-col items-center gap-5 h-[45rem]`}
           >
             <Avatar />
-            <Details aboutMe={aboutMe} contactOptions={contactOptions} />
+            <About aboutMe={aboutMe}/>
           </section>
-          <section id="skill">
+          <section id="skills">
             <h1 className="mb-3 text-xl font-semibold">Skills</h1>
             <SkillList className="lg:grid-cols-6">
               {skills &&
@@ -64,11 +64,7 @@ const Home: NextPage<any> = ({
             {projects &&
               Array.isArray(projects) &&
               projects.map((project: any, index: number) => (
-                <Project
-                  key={project.id}
-                  index={index}
-                  project={project}
-                />
+                <Project key={project.id} index={index} project={project} />
               ))}
           </section>
         </Layout>

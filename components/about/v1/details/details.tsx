@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useAnimationFrame } from "../../../hooks/useAnimationFrame";
+import { useAnimationFrame } from "../../../../hooks/useAnimationFrame";
 import { NextPage } from "next";
 import WelcomeHeading from "../wellcome-heading";
 import Content from "./content";
@@ -49,7 +49,7 @@ export const Details: NextPage<any> = ({ aboutMe, contactOptions }) => {
   }, [locked]);
 
   return (
-    <div className="h-4/6 w-full flex flex-col items-center border border-green-900 gap-5">
+    <div className="h-4/6 w-full flex flex-col items-center gap-5">
       <WelcomeHeading aboutMe={aboutMe} currentAbout={currentAbout} />
       <Contact contactOptions={contactOptions} />
       <Content

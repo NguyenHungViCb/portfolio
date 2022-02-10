@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c97711c7-0d66-4cc3-8e85-694b30cfc439" name="Changes" comment="">
+    <list default="true" id="c97711c7-0d66-4cc3-8e85-694b30cfc439" name="Changes" comment="project section and many weird thing happen so there might have bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/details/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/details/content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/about.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/about.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/v1/avatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/v1/contacts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/details/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/v1/details/content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/details/details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/v1/details/details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/wellcome-heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/v1/wellcome-heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/projectOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/projectOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/projectPreview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/projectPreview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/skills/SkillBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/skills/SkillBox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/animateTo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/animateTo.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +70,7 @@
       <recent name="$PROJECT_DIR$/components/about.tsx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/about/v1" />
       <recent name="$PROJECT_DIR$/components/about/details" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/components/burger-menu" />
@@ -81,10 +94,28 @@
       <workItem from="1644034107983" duration="567000" />
       <workItem from="1644034736207" duration="568000" />
       <workItem from="1644396552515" duration="596000" />
+      <workItem from="1644399012390" duration="1048000" />
+      <workItem from="1644418869634" duration="608000" />
+      <workItem from="1644462227862" duration="834000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project section and many weird thing happen so there might have bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="project section and many weird thing happen so there might have bugs" />
   </component>
 </project>

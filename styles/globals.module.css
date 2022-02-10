@@ -23,3 +23,7 @@
 .word-spacing-1 {
   word-spacing: 1rem;
 }
+
+.letter-spacing-0 {
+  letter-spacing: 0;
+}

@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import React, { useEffect, useRef, useState } from "react";
-import styles from "../../styles/globals.module.css";
-import { animateTo } from "../../utils/animateTo";
+import styles from "../../../styles/globals.module.css";
+import { animateTo } from "../../../utils/animateTo";
 
 let navItems: HTMLLIElement[] = [];
 const WelcomeHeading: NextPage<{
@@ -40,7 +40,7 @@ const WelcomeHeading: NextPage<{
 
   return (
     <h1
-      className={`text-2xl font-semibold italic text-slate-900 ${styles["font-inter-var"]} pb-3 relative flex pt-3 overflow-hidden border-2 `}
+      className={`text-2xl font-semibold italic text-slate-900 ${styles["font-inter-var"]} pb-3 relative flex pt-3 overflow-hidden`}
       style={{ width: h1Length + "px" }}
     >
       {/* eslint-disable-next-line react/no-unescaped-entities */}

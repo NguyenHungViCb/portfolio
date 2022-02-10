@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const aboutNavClassName =
-  "w-full sm:h-full flex items-center justify-center rounded-t-md sm:rounded-none p-1 sm:py-3";
+  "w-full flex items-center justify-center rounded-t-md sm:rounded-none";
 const activeAboutNavClassName = `bg-blue-900 ${aboutNavClassName}`;
 const Content: NextPage<{
   aboutMe: any;
@@ -36,7 +36,7 @@ const Content: NextPage<{
 
   return (
     <div
-      className={`about-nav grow flex flex-col sm:flex-row w-full border-2 border-black rounded-lg text-sm sm:text-base`}
+      className={`about-nav grow flex flex-col sm:flex-row w-full rounded-lg text-sm sm:text-base`}
       onMouseEnter={() => setLocked(true)}
       onMouseLeave={() => setLocked(false)}
     >
@@ -62,7 +62,7 @@ const Content: NextPage<{
             </li>
           ))}
       </ul>
-      <hr className={`sm:h-full border-black border`} />
+      <hr className={`sm:h-full`} />
       <div className="relative sm:w-9/12 h-full overflow-auto">
         {locked ? (
           <div className="image-container absolute right-0 z-20">

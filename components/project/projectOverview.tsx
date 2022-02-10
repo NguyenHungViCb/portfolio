@@ -9,7 +9,7 @@ export function ProjectOverview(props: {
     <div
       className={`website-overview ${
         props.index % 2 === 0 ? "lg:left-0" : "lg:right-0"
-      } rounded-b-lg lg:rounded-lg lg:absolute lg:w-2/5 lg:top-1/2 lg:-translate-y-1/2 border border-black bg-black text-white px-3 py-5 flex flex-col gap-3`}
+      } rounded-b-lg lg:rounded-lg lg:absolute lg:w-2/5 lg:top-1/2 lg:-translate-y-1/2 bg-black text-white px-3 py-5 flex flex-col gap-3`}
     >
       <div className="year absolute top-0 text-4xl font-bold bg-green-400 px-2 py-1 rounded-lg left-1/2 -translate-x-1/2 -translate-y-1/2">
         {props.project.time}

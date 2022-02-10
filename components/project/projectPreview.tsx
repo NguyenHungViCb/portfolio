@@ -3,7 +3,7 @@ export function ProjectPreview(props: { index: number; project: any }) {
     <div
       className={`${
         props.index % 2 === 0 ? "ml-auto" : "mr-auto"
-      } website-preview border-2 border-blue-900 lg:w-4/5 aspect-[1.5] rounded-t-lg lg:rounded-lg overflow-hidden`}
+      } website-preview lg:w-4/5 aspect-[1.5] rounded-t-lg lg:rounded-lg overflow-hidden`}
     >
       <img
         className="object-cover"
