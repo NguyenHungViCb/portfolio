@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "../components/header/Header";
@@ -93,7 +93,7 @@ const Home: NextPage<any> = ({
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const aboutMe = await getAboutMeData();
   const contactOptions = await getContactOptions();
   const skills = await getSkillList();
