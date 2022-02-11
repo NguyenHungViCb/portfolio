@@ -28,6 +28,7 @@ const Home: NextPage<any> = ({
     <div className="min-w-[320px] bg-gray-100 overflow-x-hidden">
       <Head>
         <title>About</title>
+        <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
       <Header />
       <main>
@@ -83,7 +84,7 @@ const Home: NextPage<any> = ({
           </section>
           <section id="contact" className="mb-10 flex flex-col items-center">
             <h1 className="mb-5 text-2xl font-semibold">Contact</h1>
-            {contactOptions && <Contact contactOptions={contactOptions} /> }
+            {contactOptions && <Contact contactOptions={contactOptions} />}
           </section>
         </Layout>
       </main>

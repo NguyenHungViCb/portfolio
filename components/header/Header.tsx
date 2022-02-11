@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import BurgerMenu from "../burger-menu/burger-menu";
 import { useViewPortWidth } from "../../hooks/useViewPortWidth";
 import styles from "./header.module.css";
@@ -63,15 +62,23 @@ export const Header = () => {
         className={`header min-h-[10vh] py-5 flex items-center justify-between w-11/12 sm:w-4/5 m-auto`}
       >
         <div className="logo z-40">
-          <div className={`image-container w-11`}>
-            <Image
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/images-b3099.appspot.com/o/avatar.svg?alt=media&token=ba3ea983-3133-41d9-88c4-002deffd991a"
-              }
-              layout="responsive"
-              width={100}
-              height={100}
-            />
+          <div className={`image-container w-11 rounded-full overflow-hidden`}>
+            <svg
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 297.81 291.85"
+            >
+              <defs></defs>
+              <polygon
+                className="cls-1 fill-gray-500"
+                points="77.81 102.98 77.81 291.35 1 291.35 1 1.49 77.81 102.98"
+              />
+              <polygon
+                className="cls-2 fill-slate-700"
+                points="297.31 1.49 297.31 291.35 220.38 291.35 77.81 102.98 1 1.49 77.81 1.49 220.5 190.02 220.5 1.49 297.31 1.49"
+              />
+            </svg>
           </div>
         </div>
         {viewportWidth >= 640 ? (

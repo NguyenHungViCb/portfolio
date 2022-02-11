@@ -3,7 +3,7 @@ const SkillList: React.FC<{ className?: string }> = ({
   children,
 }) => {
   return (
-    <ul className={`${className && className} grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3`}>
+    <ul className={`${className && className} grid grid-cols-5 sm:grid-cols-4 md:grid-cols-5 gap-3`}>
       {children}
     </ul>
   );

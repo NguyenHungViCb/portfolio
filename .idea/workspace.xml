@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c97711c7-0d66-4cc3-8e85-694b30cfc439" name="Changes" comment="begin styling process + new about section" />
+    <list default="true" id="c97711c7-0d66-4cc3-8e85-694b30cfc439" name="Changes" comment="begin styling process + new about section">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +82,7 @@
       <workItem from="1644399012390" duration="1048000" />
       <workItem from="1644418869634" duration="608000" />
       <workItem from="1644462227862" duration="1015000" />
+      <workItem from="1644584435383" duration="813000" />
     </task>
     <task id="LOCAL-00001" summary="begin styling process + new about section">
       <created>1644465334892</created>
