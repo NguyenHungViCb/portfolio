@@ -12,7 +12,7 @@ export default async function getSkillToLearnList(
       Authorization: `token ${process.env.GITHUB_PERSONAL_TOKEN}`,
     };
     const { data } = await axios.get(
-      "https://api.github.com/repos/NguyenHungViCb/portfolio/contents/data/skills/skill-to-learn.json",
+      "https://api.github.com/repos/NguyenHungViCb/portfolio/contents/data/skills/skill-to-learn.json?ref=data",
       { headers }
     );
     const bytes = base64.decode(data.content);

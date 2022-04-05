@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "../components/header/Header";
@@ -37,7 +37,7 @@ const Home: NextPage<any> = ({
             id="about"
             className={`flex flex-col items-center gap-5 h-[45rem]`}
           >
-            <Avatar />
+            {/* <Avatar /> */}
             {aboutMe && <About aboutMe={aboutMe} />}
           </section>
           <section id="skills" className="flex flex-col items-center">
@@ -94,7 +94,7 @@ const Home: NextPage<any> = ({
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const aboutMe = await getAboutMeData();
   const contactOptions = await getContactOptions();
   const skills = await getSkillList();

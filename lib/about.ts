@@ -4,6 +4,7 @@ import axios from "axios";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { BASE_URL } from "../utils/appConfig";
 
 export const extractMatter = async (text: string) => {
   const matterResult = matter(text);
@@ -43,7 +44,7 @@ export async function getAboutMeData() {
   };
   const readDataFromApi = async () => {
     try {
-      const { data } = await axios.get("https://149311cb.tech/api/about");
+      const { data } = await axios.get(`${BASE_URL}/api/about`);
       return data;
     } catch (error) {
       return null;
@@ -60,9 +61,7 @@ export async function getAboutMeData() {
 export async function getContactOptions() {
   const readDataFromApi = async () => {
     try {
-      const { data } = await axios.get(
-        "https://149311cb.tech/api/contact/options"
-      );
+      const { data } = await axios.get(`${BASE_URL}/api/contact/options`);
       return data;
     } catch (error) {
       return null;
@@ -88,7 +87,7 @@ export async function getContactOptions() {
 
 export async function getSkillList() {
   try {
-    const { data } = await axios.get("https://149311cb.tech/api/skills");
+    const { data } = await axios.get(`${BASE_URL}/api/skills`);
     return data;
   } catch (error) {
     return [];
@@ -97,9 +96,7 @@ export async function getSkillList() {
 
 export async function getSkillToLearnList() {
   try {
-    const { data } = await axios.get(
-      "https://149311cb.tech/api/skills-to-learn"
-    );
+    const { data } = await axios.get(`${BASE_URL}/api/skills-to-learn`);
     return data;
   } catch (error) {
     return [];
@@ -108,7 +105,7 @@ export async function getSkillToLearnList() {
 
 export async function getProjectList() {
   try {
-    const { data } = await axios.get("https://149311cb.tech/api/projects");
+    const { data } = await axios.get(`${BASE_URL}/api/projects`);
     return data.sort(function (a: any, b: any) {
       // @ts-ignore
       return new Date(a.timestampt) - new Date(b.timestampt);

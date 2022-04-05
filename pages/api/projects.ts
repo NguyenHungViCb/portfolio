@@ -9,7 +9,7 @@ const getProjectList = async (_: NextApiRequest, res: NextApiResponse) => {
       Authorization: `token ${process.env.GITHUB_PERSONAL_TOKEN}`,
     };
     const { data } = await axios.get(
-      "https://api.github.com/repos/NguyenHungViCb/portfolio/contents/data/projects/projects.json",
+      "https://api.github.com/repos/NguyenHungViCb/portfolio/contents/data/projects/projects.json?ref=data",
       {
         headers,
       }
